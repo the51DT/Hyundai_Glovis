@@ -1,6 +1,6 @@
-/* fonts */
-/* @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css); */
-/* @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css); */
+@charset "utf-8";
+@import url('https://webfontworld.github.io/pretendard/Pretendard.css');
+
 
 /* reset */
 html, body, div, span, applet, object, iframe,
@@ -21,7 +21,9 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	font-family: 'Pretendard';
 	vertical-align: baseline;
+	box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -33,8 +35,9 @@ html {
 }
 body {
 	line-height: 1;
-	font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+	font-family: 'Pretendard';
 	font-size:1.6rem;
+	box-sizing: border-box;
 }
 ol, ul {
 	list-style: none;
@@ -56,6 +59,7 @@ a, a:visited, a:hover, a:active{
 	text-decoration: none;
 }
 input, textarea, select, button, a{
+	font-family: 'Pretendard';
 	outline:none;
 }
 

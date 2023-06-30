@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A안 메인</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/a_main.css">
+    <script src="/assets/js/jquery.js"></script>
+    <!-- <script src="/assets/js/front.js"></script> -->
 </head>
 <body>
-    A안 메인
+    <div class="wrap">
+        <header class="header">
+            <div class="header_inner">
+                <h1 class="logo"></h1>
+                <nav class="header_nav"><a href="a_sub.html" target="_blank"></a></nav>
+            </div>
+        </header>
+
+        <div class="container">
+            <section class="aside_section">
+                <div class="my_area"></div>
+                <div class="cal_area">
+                    <div class="pc">
+                        <img src="/assets/images/a_main/calendar.png" alt="">
+                    </div>
+                    <div class="pc_1600">
+                        <a href="#" onclick="popupOpen()">
+                            <img src="/assets/images/a_main/calendar_1600.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main_section">
+                <div class="main_box"></div>
+            </section>
+        </div>
+    </div>
+
+    <div class="popup">
+        <div class="pop_wrap">
+            <div class="cal">
+                <div class="pop_1600">
+                    <img src="/assets/images/a_main/calendar.png" alt="">
+                </div>
+                <div class="pop_1200">
+                    <img src="/assets/images/a_main/calendar_1200.png" alt="">
+                </div>
+            </div>
+            <button type="button" class="btn_pop_close" onclick="popupClose()"></button>
+        </div>
+    </div>
+
+<script>
+    "use strict";
+
+    function popupOpen() {
+        document.querySelector(".popup").classList.add("active");
+    }
+
+    function popupClose() {
+        document.querySelector(".popup").classList.remove("active");
+    }
+
+    document.querySelector(".popup").addEventListener("click", (e)=>{
+        e.target.classList.remove("active");
+    })
+</script>
 </body>
 </html>
