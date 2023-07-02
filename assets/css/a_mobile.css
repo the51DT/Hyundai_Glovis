@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+.wrap {width:calc(100vw*360/var(--vw)); margin:0 auto;}
+.wrap > img {display:block; width:100%;}
+header {position:fixed; left:0; right:0; width:calc(100vw*360/var(--vw)); margin:0 auto;}
+header > img {display:block; width:100%;}
