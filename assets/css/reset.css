@@ -61,6 +61,7 @@ a, a:visited, a:hover, a:active{
 input, textarea, select, button, a{
 	font-family: 'Pretendard';
 	outline:none;
+	box-sizing: border-box;
 }
 
 button {cursor:pointer; background:none; border:0 none;}
