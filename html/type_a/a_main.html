@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A안 메인</title>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/a_main.css">
-    <script src="/assets/js/jquery.js"></script>
-    <!-- <script src="/assets/js/front.js"></script> -->
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/a_main.css">
 </head>
 <body>
     <div class="wrap">
@@ -23,11 +21,11 @@
                 <div class="my_area"></div>
                 <div class="cal_area">
                     <div class="pc">
-                        <img src="/assets/images/a_main/calendar.png" alt="">
+                        <img src="../../assets/images/a_main/calendar.png" alt="">
                     </div>
                     <div class="pc_1600">
-                        <a href="#" onclick="popupOpen()">
-                            <img src="/assets/images/a_main/calendar_1600.png" alt="">
+                        <a href="#" id="popOpen">
+                            <img src="../../assets/images/a_main/calendar_1600.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -43,10 +41,10 @@
         <div class="pop_wrap">
             <div class="cal">
                 <div class="pop_1600">
-                    <img src="/assets/images/a_main/calendar.png" alt="">
+                    <img src="../../assets/images/a_main/calendar.png" alt="">
                 </div>
                 <div class="pop_1200">
-                    <img src="/assets/images/a_main/calendar_1200.png" alt="">
+                    <img src="../../assets/images/a_main/calendar_1200.png" alt="">
                 </div>
             </div>
             <button type="button" class="btn_pop_close" onclick="popupClose()"></button>
@@ -56,9 +54,10 @@
 <script>
     "use strict";
 
-    function popupOpen() {
+    document.getElementById("popOpen").addEventListener("click", (e)=>{
+        e.preventDefault();
         document.querySelector(".popup").classList.add("active");
-    }
+    })
 
     function popupClose() {
         document.querySelector(".popup").classList.remove("active");

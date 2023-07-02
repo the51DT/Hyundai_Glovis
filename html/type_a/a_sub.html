@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A안 서브</title>
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/a_sub.css">
-    <script src="/assets/js/jquery.js"></script>
-    <!-- <script src="/assets/js/front.js"></script> -->
+    <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/a_sub.css">
+    <script src="../../assets/js/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -21,32 +21,740 @@
         <div class="container">
             <section class="aside_section">
                 <div class="aside_top_wrap"></div>
-                <div class="accro_wrap">
-                    <div class="acco_head">
-                        <button type="button" class="acco_open">경매 정보</button>
-                    </div>
+
+                <div class="acco_wrap">
+                    <button type="button" class="acco_head">경매 정보</button>
+
                     <div class="acco_cont">
-                        <div class="cont_tit">거점</div>
+                        <div class="check_tit">거점</div>
                         <div class="check_wrap">
-                            
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">전체</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">인천</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">시화</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">분당</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">양산</span>
+                                </label>
+                            </div>
                         </div>
+
+                        <div class="check_tit">레인</div>
+                        <div class="check_wrap">
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">전체</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">1레인</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">2레인</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">3레인</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">4레인</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="check_tit">경매결과</div>
+                        <div class="check_wrap">
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">전체</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">미진행</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">낙찰</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">유찰</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="check_tit">오토벨 경매 차량 여부</div>
+                        <div class="check_wrap col2">
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">전체 차량</span>
+                                </label>
+                            </div>
+                            <div class="check_item">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">오토벨 차량만</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acco_wrap">
+                    <button type="button" class="acco_head">제조사</button>
+
+                    <div class="acco_cont">
+                        <div class="check_tit">국산(8727)</div>
+                        <div class="check_wrap">
+                            <ul class="check_sub_wrap">
+                                <li>
+                                    <div class="check_item">
+                                        <label>
+                                            <input type="checkbox" class="check_sub">
+                                            <span class="label">기아(80)</span>
+                                        </label>
+                                    </div>
+                                    <ul class="sub">
+                                        <li>
+                                            <div class="check_item">
+                                                <label>
+                                                    <input type="checkbox" class="check_sub">
+                                                    <span class="label">모닝(10)</span>
+                                                </label>
+                                            </div>
+                                            <ul class="sub">
+                                                <li>
+                                                    <div class="check_item">
+                                                        <label>
+                                                            <input type="checkbox" class="check_sub">
+                                                            <span class="label">모닝 어반(20년 ~ 현재)(5)</span>
+                                                        </label>
+                                                    </div>
+                                                    <ul class="sub">
+                                                        <li>
+                                                            <div class="check_item">
+                                                                <label>
+                                                                    <input type="checkbox" class="check_sub">
+                                                                <span class="label">가솔린(2)</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="check_item">
+                                                                <label>
+                                                                    <input type="checkbox" class="check_sub">
+                                                                <span class="label">벤(3)</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="check_item">
+                                                <label>
+                                                    <input type="checkbox" class="check_sub">
+                                                    <span class="label">신형 모닝(30)</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check_item">
+                                                <label>
+                                                    <input type="checkbox" class="check_sub">
+                                                    <span class="label">더 뉴모닝(40)</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="check_item">
+                                        <label>
+                                            <input type="checkbox" class="check_sub">
+                                            <span class="label">쉐보레(대우)(349)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check_item">
+                                        <label>
+                                            <input type="checkbox" class="check_sub">
+                                            <span class="label">쌍용(238)</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acco_wrap">
+                    <button type="button" class="acco_head">차종</button>
+
+                    <div class="acco_cont">
+                        <div class="check_wrap row">
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_all">
+                                    <span class="label">전체(1,605)</span>
+                                    <i class="icon icon_all"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">경차(182)</span>
+                                    <i class="icon icon_car01"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">소형차(45)</span>
+                                    <i class="icon icon_car02"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">준중형차(189)</span>
+                                    <i class="icon icon_car03"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">중형차(255)</span>
+                                    <i class="icon icon_car03"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">대형차(182)</span>
+                                    <i class="icon icon_car03"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">스포츠카(33)</span>
+                                    <i class="icon icon_car04"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">RV(58)</span>
+                                    <i class="icon icon_car05"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">SUV(429)</span>
+                                    <i class="icon icon_car06"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">승합차(30)</span>
+                                    <i class="icon icon_car07"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">화물차(48)</span>
+                                    <i class="icon icon_car08"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">버스(0)</span>
+                                    <i class="icon icon_car09"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">특장차(5)</span>
+                                    <i class="icon icon_car10"></i>
+                                </label>
+                            </div>
+                            <div class="check_item icon">
+                                <label>
+                                    <input type="checkbox" class="check_sub">
+                                    <span class="label">기타(0)</span>
+                                    <i class="icon icon_etc"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acco_wrap">
+                    <button type="button" class="acco_head">연식</button>
+
+                    <div class="acco_cont">
+                        <span class="select_tit">From</span>
+                        <div class="select">
+                            <select>
+                                <option value="2010">2010</option>
+                                <option value="2014">2014</option>
+                                <option value="2023">2023</option>
+                            </select>
+                        </div>
+
+                        <span class="select_tit">To</span>
+                        <div class="select">
+                            <select>
+                                <option value="2010">2010</option>
+                                <option value="2014">2014</option>
+                                <option value="2023">2023</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acco_wrap">
+                    <button type="button" class="acco_head">주행거리</button>
+
+                    <div class="acco_cont">
+                        <span class="select_tit">From</span>
+                        <div class="select">
+                            <select>
+                                <option value="10000">10,000</option>
+                                <option value="20000">20,000</option>
+                                <option value="150000">150,000</option>
+                            </select>
+                        </div>
+                        
+                        <span class="select_tit">To</span>
+                        <div class="select">
+                            <select>
+                                <option value="10000">10,000</option>
+                                <option value="20000">20,000</option>
+                                <option value="150000">150,000</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="acco_wrap">
+                    <button type="button" class="acco_head">연료</button>
+
+                    <div class="acco_cont">
+                        <img class="pc" src="../../assets/images/a_sub/acco_cont_img1.png" alt="">
+                        <img class="pc_1600" src="../../assets/images/a_sub/acco_cont_img1_1600.png" alt="">
+                    </div>
+                </div>
+
+                <div class="acco_wrap">
+                    <button type="button" class="acco_head">색상</button>
+
+                    <div class="acco_cont">
+                        <img class="pc" src="../../assets/images/a_sub/acco_cont_img2.png" alt="">
+                        <img class="pc_1600" src="../../assets/images/a_sub/acco_cont_img2_1600.png" alt="">
+                    </div>
+                </div>
+
+                <div class="acco_wrap">
+                    <button type="button" class="acco_head">변속기</button>
+
+                    <div class="acco_cont">
+                        <img class="pc" src="../../assets/images/a_sub/acco_cont_img3.png" alt="">
+                        <img class="pc_1600" src="../../assets/images/a_sub/acco_cont_img3_1600.png" alt="">
+                    </div>
+                </div>
+
+                <div class="acco_wrap">
+                    <button type="button" class="acco_head">사고유무</button>
+
+                    <div class="acco_cont">
+                        <img class="pc" src="../../assets/images/a_sub/acco_cont_img4.png" alt="">
+                        <img class="pc_1600" src="../../assets/images/a_sub/acco_cont_img4_1600.png" alt="">
                     </div>
                 </div>
             </section>
 
             <section class="main_section">
-                <div class="lt_area">
-
+                <div class="main_box">
+                    <img class="pc" src="../../assets/images/a_sub/sub_list_1920.png" alt="">
+                    <img class="pc_1600" src="../../assets/images/a_sub/sub_list_1600.png" alt="">
+                    <img class="pc_1200" src="../../assets/images/a_sub/list_1200.png" alt="">
+                
+                    <ul class="car_list">
+                        <li>
+                            <div class="card"></div>
+                        </li>
+                        <li>
+                            <div class="card"></div>
+                        </li>
+                        <li>
+                            <div class="card"></div>
+                        </li>
+                        <li>
+                            <div class="card"></div>
+                        </li>
+                        <li>
+                            <div class="card"></div>
+                        </li>
+                        <li>
+                            <div class="card"></div>
+                        </li>
+                        <li>
+                            <div class="card"></div>
+                        </li>
+                        <li>
+                            <div class="card"></div>
+                        </li>
+                        <!-- <li>
+                            <div class="thumb_area">
+                                <img src="../../assets/images/a_sub/thum_01.png" alt="">
+                            </div>
+                            <div class="info_area">
+                                <div class="row">
+                                    <span class="badge"></span>
+                                    <span class="heart"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="info"></span>
+                                    <span class="price"></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumb_area">
+                                <img src="../../assets/images/a_sub/thum_02.png" alt="">
+                            </div>
+                            <div class="info_area">
+                                <div class="row">
+                                    <span class="badge"></span>
+                                    <span class="heart"></span>
+                                </div>
+                                <div class="row">
+                                    <span class="info"></span>
+                                    <span class="price"></span>
+                                </div>
+                            </div>
+                        </li> -->
+                    </ul>
                 </div>
-                <div class="rt_area">
+                <div class="main_box">
+                    <img class="pc" src="../../assets/images/a_sub/sub_detail_1920.png" alt="">
+                    <img class="pc_1600" src="../../assets/images/a_sub/sub_detail_1600.png" alt="">
+                    <img class="pc_1200" src="../../assets/images/a_sub/sub_detail_1920.png" alt="">
 
+                    <img class="pc" style="margin-top:3.2rem;" src="../../assets/images/a_sub/sub_detail_02_1920.png" alt="">
+                    <img class="pc_1600" style="margin-top:3.2rem;" src="../../assets/images/a_sub/sub_detail_02_1600.png" alt="">
+                    <img class="pc_1200" style="margin-top:3.2rem;" src="../../assets/images/a_sub/sub_detail_02_1920.png" alt="">
+
+                    <div class="swiper car_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="btn_wrap">
+                                <img src="../../assets/images/a_sub/slide_btn.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div thumbsSlider class="swiper car_slide2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_01.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../../assets/images/a_sub/car_slide_04.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <img class="pc" src="../../assets/images/a_sub/sub_detail_03_1920.png" alt="">
+                    <img class="pc_1600" src="../../assets/images/a_sub/sub_detail_03_1600.png" alt="">
+                    <img class="pc_1200" src="../../assets/images/a_sub/sub_detail_03_1920.png" alt="">
+                    
+                    <div class="bottom_section">
+                        <div class="item">
+                            <span class="item_tit">시작가</span>
+                            <span class="item_txt">4,899만원</span>
+                        </div>
+                        <div class="input_item">
+                            <span class="input_tit">입찰가</span>
+                            <input type="text" placeholder="입찰가를 입력해주세요.">
+                        </div>
+                        <button type="button" class="btn_primary">부재자 응찰</button>
+                        <!-- <img src="../../assets/images/a_sub/bottom_sheet.png" alt=""> -->
+                    </div>
                 </div>
+
             </section>
         </div>
     </div>
 
 <script>
+    "use strict";
+    
+    // vw
+    function vw(){
+        const innerWidth = window.innerWidth;
+        if(innerWidth < 1920){
+            document.documentElement.style.setProperty('--vw', `1920`);
+        } else {
+            document.documentElement.style.setProperty('--vw', `${innerWidth}`);
+        }
+    }
+    vw();
 
+    window.addEventListener(`resize`, function() {
+    vw();
+    });
+
+    // accordion
+    document.querySelectorAll(".acco_wrap").forEach(function(item){
+        let accoHead = item.querySelector(".acco_head");
+        let accoCont = item.querySelectorAll(".acco_cont");
+        
+        accoHead.addEventListener("click", function(){
+            this.parentNode.classList.toggle("active");
+        })
+    })
+
+    // checkbox
+    document.querySelectorAll(".check_wrap").forEach(function(item){
+        if(item.querySelectorAll(".check_all").length){
+            item.addEventListener("change", function(e){
+                let chkAll = item.querySelector(".check_all");
+                let chkSub = item.querySelectorAll(".check_sub");
+                let checkedSub = this.querySelectorAll(".check_sub:checked");
+    
+                if(e.target.classList.contains("check_all")){
+                    let is_checked = e.target.checked;
+                    chkSub.forEach((item)=>{
+                        item.checked = is_checked;
+                    })
+                    return;
+                }
+                checkedSub.length === chkSub.length ? chkAll.checked = true : chkAll.checked = false;
+            })
+        }
+        if(item.querySelectorAll(".check_sub_wrap").length){
+            item.addEventListener("change", function(e){
+                let target = e.target.parentNode.parentNode;
+                if(target.nextElementSibling !== null){
+                    target.nextElementSibling.style.display = "block";
+                }
+            })
+        }
+    })
+
+    // car slide
+    let swiper = new Swiper(".car_slide2", {
+        // spaceBetween: 4,
+        slidesPerView: "auto",
+        cssMode: true,
+        // breakpoints: {
+        //     1200: {
+        //         spaceBetween: 4,
+        //     },
+        //     1600: {
+        //         spaceBetween: 6,
+        //     },
+        //     1920: {
+        //         spaceBetween: 4,
+        //     }
+        // }
+    });
+    let swiper2 = new Swiper(".car_slide", {
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
 </script>
 </body>
 </html>
