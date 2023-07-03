@@ -11,10 +11,16 @@ function vw(){
         document.documentElement.style.setProperty('--vw', `${innerWidth}`);
     }
 }
-vw();
+function vh(){
+    const innerHeight = window.innerHeight;
+    document.documentElement.style.setProperty('--vh', `${innerHeight}px`);
+}
+vh();
 
 window.addEventListener(`resize`, function() {
-  vw();
+    vw();
+    vh();
+    // document.querySelector(".btm_fixed_section").classList.toggle("active")
 });
 
 

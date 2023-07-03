@@ -70,3 +70,15 @@ button {cursor:pointer; background:none; border:0 none;}
 ::-webkit-scrollbar-track{background:rgba(33,122,244,.03)}
 
 .blind{position:absolute; left:-9999px; top:-9999px; width:1px; height:1px; text-indent: -9999px; overflow:hidden;}
+
+:root {
+	--sat:constant(safe-area-inset-top);
+	--sar:constant(safe-area-inset-right);
+	--sab:constant(safe-area-inset-bottom);
+	--sal:constant(safe-area-inset-left);
+
+	--sat:env(safe-area-inset-top);
+	--sar:env(safe-area-inset-right);
+	--sab:env(safe-area-inset-bottom);
+	--sal:env(safe-area-inset-left);
+}
