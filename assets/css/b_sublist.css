@@ -102,6 +102,7 @@ header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul li:hover {background: #F4F
 /* ---- main section ---- */
 .main_section {max-width: calc(100vw* 1192 /var(--vw)); padding: calc(100vw * 40 /var(--vw)) 0 calc(100vw * 40 /var(--vw)) calc(100vw * 565 /var(--vw));}
 .main_section .pc1920 .title-wrap a .title-item {display:block; top:2.4rem; right:0; width:calc(100vw * 1192 /var(--vw)); height: calc(100vw * 85 /var(--vw)); background:url(../images/b_sub/subist_title_1920.png) no-repeat center / contain; transition:all 0.2s;}
+.main_section .pc1920 .list-wrap a {display: block; width: calc(100vw * 1192 /var(--vw));}
 .main_section .pc1920 .list-wrap a .list-item {display:block; top:2.4rem; right:0; width:calc(100vw * 1192 /var(--vw)); height: calc(100vw * 2688 /var(--vw)); background:url(../images/b_sub/subist_list_1920.png) no-repeat center / contain; transition:all 0.2s;}
 .main_section.active .pc1920 .title-wrap a .title-item {display:block; top:2.4rem; right:0; width:calc(100vw * 1192 /var(--vw)); height: calc(100vw * 85 /var(--vw)); background:url(../images/b_sub/subist_title_active_1920.png) no-repeat center / contain; transition:all 0.2s;}
 .main_section.active .pc1920 .list-wrap a .list-item {display:block; top:2.4rem; right:0; width:calc(100vw * 1192 /var(--vw)); height: calc(100vw * 2940 /var(--vw)); background:url(../images/b_sub/subist_list_active_1920.png) no-repeat center / contain; transition:all 0.2s;}
