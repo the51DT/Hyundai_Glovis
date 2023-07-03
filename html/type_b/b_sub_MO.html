@@ -18,7 +18,12 @@
         <button type="button" class="list_link typeB" onclick="popupOpen()"></button>
 
         <div class="filter_popup typeB">
+            <a href="#" class="filter_header"></a>
             <img src="../../assets/images/b_mobile/sub_filter.png" alt="">
+        </div>
+
+        <div class="btm_fixed_section">
+            <img src="../../assets/images/b_mobile/b_appbar.png" alt="">
         </div>
 
     </div>
@@ -51,7 +56,7 @@
         window.scrollTo(0,0);
     };
 
-    document.querySelector("header a").addEventListener("click", function(e){
+    document.querySelector(".filter_header").addEventListener("click", function(e){
         e.preventDefault();
         if(this.parentNode.classList.contains("active")){
             document.querySelector("header").classList.remove("active");
