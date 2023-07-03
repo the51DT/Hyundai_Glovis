@@ -3,6 +3,7 @@
 .scroll_fixed {height:100vh;}
 body::-webkit-scrollbar {display:none;}
 .wrap {position:relative; width:36rem; margin:0 auto; box-shadow:0 0.5rem 2rem rgba(0,0,0,0.25); overflow:hidden;}
+.wrap.detail {overflow:visible;}
 .wrap > img {display:block; width:100%;}
 
 /* main>sub 링크 */
@@ -28,6 +29,9 @@ header a img {display:block; width:100%;}
 .filter_popup.typeB.active {z-index:10000;}
 .filter_popup.typeB .filter_header {position:fixed; display:block; left:0; right:0; width:36rem; height:6.3rem; margin:0 auto;}
 .filter_popup.typeB > img {width:100%;}
+
+.sticky {position:sticky; top:7.6rem; background-color:#fff;}
+.sticky > img {width:100%;}
 
 /* accordion */
 .acco_wrap {margin-top:2rem; border-top:1px solid #E8EBF0;}
@@ -85,13 +89,14 @@ header a img {display:block; width:100%;}
 .car_slide .swiper-slide > img {display:block; width:100%;}
 .car_slide .btn_wrap {position:absolute; right:1rem; bottom:1rem; width:8.4rem; height:4rem;}
 .car_slide .btn_wrap > img {display:block; width:100%;}
-.car_slide2 {margin:0.2rem 3.2rem -3.2rem; padding-bottom:5.6rem; border-bottom:1px solid #E8EBF0; cursor:pointer;}
+.car_slide2 {margin:0.2rem 3.2rem 0; padding-bottom:5.6rem; cursor:pointer;}
 .car_slide2 .swiper-wrapper {flex-wrap:wrap; width:calc(100% + 0.4rem); margin-left:-0.2rem;}
 .car_slide2 .swiper-slide {width:calc(20% - 0.4rem); margin:0.2rem; border-radius:0.8rem; overflow:hidden; opacity:0.3;}
 .car_slide2 .swiper-slide-thumb-active {opacity:1;}
 .car_slide2 .swiper-slide > img {display:block; width:100%;}
 
-.btm_fixed_section {position:fixed; display:flex; flex-direction:column; align-items:flex-end; left:0; right:0; bottom:0; width:36rem; margin:0 auto;}
+.btm_fixed_section {position:fixed; display:flex; flex-direction:column; align-items:flex-end; left:0; right:0; bottom:-21.5rem; width:36rem; margin:0 auto; transition:all 0.4s;}
+.btm_fixed_section.active {bottom:0; transition:all 0.4s;}
 .btm_fixed_section > img {width:100%;}
 .btm_fixed_section > img.btm {border-radius:2rem 2rem 0 0; box-shadow:0 0.5rem 2rem rgba(0,0,0,0.25); overflow:hidden;}
 .btm_fixed_section > img.btn {width:9.4rem; height:9.4rem;}
