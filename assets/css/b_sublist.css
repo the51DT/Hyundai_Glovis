@@ -19,15 +19,10 @@ body{margin: 0 auto; max-width: 1920px; width: 100%; height:100%; background-col
 /* ---- Header ---- */
 header {max-width: 1920px; width: 100%; z-index: 100; position: fixed; background-color: #ffffff;}
 header .pc1920 .gnb-wrap a img {width: 100%; height: 100%;}
-header .pc1920 .gnb-wrap .button-box .sub {position: absolute; width:calc(100vw * 70 /var(--vw)); height:calc(100vw * 20 /var(--vw)); top: calc(100vw * 29 /var(--vw)); left: calc(100vw * 1230 /var(--vw));}
-header .pc1920 .gnb-wrap .button-box .myPage {position: absolute; width:calc(100vw * 24 /var(--vw)); height:calc(100vw * 24 /var(--vw)); top: calc(100vw * 26 /var(--vw)); right: calc(100vw * 24 /var(--vw));}
-header .pc1920 .gnb-wrap .button-box .gnb-dropdown {display: none; border-radius: 4px; border: 2px solid #F3F3F3; background: #FFF; box-shadow: 0px 4px 12px 0px rgba(238, 238, 238, 0.80); position: absolute; top: calc(100vw * 72 /var(--vw)); right: calc(100vw * 24 /var(--vw));}
-header .pc1920 .gnb-wrap .button-box .gnb-dropdown.active {display: block;}
-header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul {text-align: center;}
-header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul li {padding: calc(100vw * 20 /var(--vw)); color: #6E7275; font-family: 'Pretendard'; font-weight: 500; font-size: calc(100vw * 16 /var(--vw)); line-height: normal;}
-header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul li:hover {background: #F4F7FF;}
+header .pc1920 .gnb-wrap .button-box .main {position: absolute; width: calc(100vw * 300 /var(--vw)); height: calc(100vw * 80 /var(--vw)); top: calc(100vw * 0 /var(--vw)); left: calc(100vw * 100/var(--vw));}
+header .pc1920 .gnb-wrap .button-box .sub {position: absolute; width: calc(100vw * 100 /var(--vw)); height: calc(100vw * 80 /var(--vw)); top: calc(100vw * 0 /var(--vw)); left: calc(100vw * 860/var(--vw));}
 
-.top-wrap {max-width: 1920px; width: 100%; z-index: 100; position: fixed; padding-top: calc(100vw * 76 /var(--vw));}
+.top-wrap {max-width: 1920px; width: 100%; z-index: 100; position: fixed; margin-top: calc(100vw * 76 /var(--vw));}
 .top-wrap .pc1920 .top-area img {width: 100%; height: 100%;}
 
 /* container */
@@ -42,7 +37,7 @@ header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul li:hover {background: #F4F
 /* accordion */
 .acco_wrap {}
 .acco_wrap + .acco_wrap {margin-top:-1px;}
-.acco_wrap .acco_head {position:relative; width:100%; padding:2.4rem 0; border-bottom:1px solid #E8EBF0; color:#30353E; font-size: calc(100vw * 17 /var(--vw)); font-weight:bold; line-height:2rem; text-align:left;}
+.acco_wrap .acco_head {position:relative; width:100%; padding:2.1rem 0; border-bottom:1px solid #E8EBF0; color:#30353E; font-size: calc(100vw * 17 /var(--vw)); font-weight:bold; line-height:2rem; text-align:left;}
 .acco_wrap .acco_head span {float: right; padding-right: calc(100vw * 30 /var(--vw));color: #BFC4CE;}
 .acco_wrap .acco_head::after {content:''; display:block; position:absolute; top:2.4rem; right:0; width: calc(100vw * 24 /var(--vw)); height: calc(100vw * 24 /var(--vw)); background:url(../images/b_sub/btn_acco.png) no-repeat center / contain; transition:all 0.2s;}
 .acco_wrap.active .acco_head::after {transition:all 0.2s; width: calc(100vw * 24 /var(--vw)); height: calc(100vw * 24 /var(--vw)); background:url(../images/b_sub/btn_acco_active.png) no-repeat center / contain;}
@@ -89,10 +84,11 @@ header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul li:hover {background: #F4F
 .check_item3 .label p:last-child {color:#6E7275; font-size: calc(100vw * 14 /var(--vw)); line-height: calc(100vw * 17 /var(--vw));}
 .check_item3 .label::before {content:''; display:block; position:absolute; left:0; top:0; width:calc(100vw * 120 /var(--vw)); height:calc(100vw * 100 /var(--vw)); border:1px solid #bbb; border-radius:0.4rem; box-sizing:border-box;}
 .check_item3 input:checked + .label {color: #2644F7;}
+.check_item3 input:checked + .label p {color: #2644F7;}
 .check_item3 input:checked + .label::before {border: 1px solid rgba(38, 68, 247, 0.60);}
 .check_item3 .icon label {padding-right:4.4rem;}
 .check_item label .icon {display:block; position:absolute; top: calc(100vw * 25/var(--vw)); left: calc(100vw * 40/var(--vw)); width:calc(100vw * 40/var(--vw)); height:calc(100vw * 40/var(--vw));}
-.check_item label .icon.icon_all {background:url(../images/a_sub/icon_all.png) no-repeat center / contain;}
+.check_item label .icon.icon_all {background:url(../images/b_sub/icon_all_active.png) no-repeat center / contain;}
 .check_item label .icon.icon_etc {background:url(../images/a_sub/icon_etc.png) no-repeat center / contain;}
 .check_item label .icon.icon_car01 {background:url(../images/a_sub/car01.png) no-repeat center / contain;}
 .check_item label .icon.icon_car02 {background:url(../images/a_sub/car02.png) no-repeat center / contain;}
@@ -104,7 +100,9 @@ header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul li:hover {background: #F4F
 .check_item label .icon.icon_car08 {background:url(../images/a_sub/car08.png) no-repeat center / contain;}
 .check_item label .icon.icon_car09 {background:url(../images/a_sub/car09.png) no-repeat center / contain;}
 .check_item label .icon.icon_car10 {background:url(../images/a_sub/car10.png) no-repeat center / contain;}
-
+.check_item3 label .icon.icon_all.active {background:url(../images/b_sub/icon_all.png) no-repeat center / contain;}
+.check_item3 label .icon.icon_car01.active {background:url(../images/b_sub/icon_car01_active.png) no-repeat center / contain;} 
+ 
 /* ---- main section ---- */
 .main_section {max-width: calc(100vw* 1192 /var(--vw)); padding: calc(100vw * 40 /var(--vw)) 0 calc(100vw * 40 /var(--vw)) calc(100vw * 565 /var(--vw));}
 .main_section .pc1920 .title-wrap a .title-item {display:block; top:2.4rem; right:0; width:calc(100vw * 1192 /var(--vw)); height: calc(100vw * 85 /var(--vw)); background:url(../images/b_sub/subist_title_1920.png) no-repeat center / contain; transition:all 0.2s;}
@@ -156,8 +154,10 @@ header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul li:hover {background: #F4F
   /* ---- Header ---- */
   header {max-width: 1200px; width: 100%; position: relative; z-index: 100; position: fixed; background-color: #ffffff;}
   header .pc1200 .gnb-wrap a img {width:calc(100vw * 1200 /var(--vw)); height: calc(100vw * 76 /var(--vw));}
-
-  .top-wrap {max-width: 1200px; width: 100%; z-index: 100; position: fixed; padding-top: calc(100vw * 84 /var(--vw));}
+  header .pc1200 .gnb-wrap .button-box .main {position: absolute; width: calc(100vw * 150 /var(--vw)); height: calc(100vw * 80 /var(--vw)); top: calc(100vw * 0 /var(--vw)); left: calc(100vw * 0/var(--vw));}
+  header .pc1200 .gnb-wrap .button-box .sub {position: absolute; width: calc(100vw * 100 /var(--vw)); height: calc(100vw * 80 /var(--vw)); top: calc(100vw * 0 /var(--vw)); left: calc(100vw * 243/var(--vw));}
+  
+  .top-wrap {max-width: 1200px; width: 100%; z-index: 100; position: fixed; margin-top: calc(100vw * 76 /var(--vw));}
   .top-wrap .pc1200 .top-area img {width: 100%; height: 100%;}
 
   .fix-wrap {display:block; position: fixed; top: calc(100vw * 297 /var(--vw));left: calc(100vw * 1131 /1200);width:calc(100vw * 108 /1920); height: calc(100vw * 301 /1920); background:url(../images/b_sub/sublist_fix.png) no-repeat center / contain; transition:all 0.2s;}

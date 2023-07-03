@@ -17,6 +17,7 @@
       <div class="gnb-wrap">
         <a href="#" class="gnb"><img src="../../assets/images/b_sub/sub-gnb.png"></a>
         <div class="button-box">
+          <a href="./b_main.html" class="main"></a>
           <a href="./b_sublist.html" class="sub"></a>
         </div>
       </div>
@@ -25,6 +26,7 @@
       <div class="gnb-wrap">
         <a href="#" class="gnb"><img src="../../assets/images/b_sub/sub-gnb_1200.png"></a>
         <div class="button-box">
+          <a href="./b_main.html" class="main"></a>
           <a href="./b_sublist.html" class="sub"></a> 
         </div>
       </div>
@@ -54,7 +56,7 @@
               <div class="check_tit">거점</div>
               <div class="check_wrap">
                   <div class="check_item">
-                      <label >
+                      <label>
                           <input type="checkbox" class="check_sub" checked>
                           <span class="label">전체</span>
                       </label>
@@ -277,7 +279,7 @@
               <div class="check_item check_item3">
                   <label>
                     <input type="checkbox" class="check_all" checked>
-                    <div class="label">
+                    <div class="label label_icon_all">
                       <p>전체</p>
                       <p>1,603</p>
                     </div>
@@ -287,7 +289,7 @@
               <div class="check_item check_item3">
                   <label>
                     <input type="checkbox" class="check_sub">
-                    <div class="label">
+                    <div class="label label_icon_car01">
                       <p>경차</p>
                       <p>182</p>
                     </div>
@@ -527,6 +529,13 @@ $(".list_btn").click(function(){
     accoHead.addEventListener("click", function(){
       this.parentNode.classList.toggle("active");
     })
+  })
+
+  $(".label_icon_all").click(function(){
+    $(".icon_all").toggleClass("active");
+  })
+  $(".label_icon_car01").click(function(){
+    $(".icon_car01").toggleClass("active");
   })
 
   // checkbox
