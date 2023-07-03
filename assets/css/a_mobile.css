@@ -92,6 +92,8 @@ header a img {display:block; width:100%;}
 .car_slide2 .swiper-slide > img {display:block; width:100%;}
 
 .btm_fixed_section {position:fixed; display:flex; flex-direction:column; align-items:flex-end; left:0; right:0; bottom:0; width:36rem; margin:0 auto;}
+.btm_fixed_section .list {position: absolute; width: 70px; height: 70px; bottom: 5px; left: 17px;}
+.btm_fixed_section .main {position: absolute; width: 70px; height: 70px; bottom: 5px; left: 143px;}
 .btm_fixed_section > img {width:100%;}
 .btm_fixed_section > img.btm {border-radius:2rem 2rem 0 0; box-shadow:0 0.5rem 2rem rgba(0,0,0,0.25); overflow:hidden;}
 .btm_fixed_section > img.btn {width:9.4rem; height:9.4rem;}
