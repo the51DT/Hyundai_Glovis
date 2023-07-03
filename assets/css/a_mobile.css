@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.scroll_fixed {height:100vh;}
+.scroll_fixed {height:var(--vh);}
 body::-webkit-scrollbar {display:none;}
 .wrap {position:relative; width:100%; max-width:72rem; margin:0 auto; box-shadow:0 0.5rem 2rem rgba(0,0,0,0.25); overflow:hidden;}
 .wrap.detail {overflow:visible;}
