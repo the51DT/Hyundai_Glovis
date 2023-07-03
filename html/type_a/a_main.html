@@ -25,14 +25,10 @@
                     <div class="pc">
                         <img src="../../assets/images/a_main/calendar.png" alt="">
                     </div>
-                    <div class="pc_1600">
+                    <div>
                         <a href="#" id="popOpen">
-                            <img src="../../assets/images/a_main/calendar_1600.png" alt="">
-                        </a>
-                    </div>
-                    <div class="pc_1200">
-                        <a href="#" id="popOpen">
-                            <img src="../../assets/images/a_main/calendar_1600.png" alt="">
+                            <img class="pc_1600" src="../../assets/images/a_main/calendar_1600.png" alt="">
+                            <img class="pc_1200" src="../../assets/images/a_main/calendar_1600.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -100,46 +96,27 @@
     "use strict";
 
     // vw
-    function vw(){
-        // const innerWidth = window.innerWidth;
-        const innerHeight = window.innerHeight;
-        const vw = innerHeight*(1920/1080);
+    // function vw(){
+    //     const innerWidth = window.innerWidth;
+    //     document.documentElement.style.setProperty('--vw', `${innerWidth}`);
+    // }
+    // vw();
 
-        document.documentElement.style.setProperty('--vw', `${vw}px`);
-
-        // if(innerWidth > 1920){
-        //     document.documentElement.style.setProperty('--vw', `${vw}`);
-        // } else if(1600 < innerWidth <= 1920){
-        //     document.documentElement.style.setProperty('--vw', `1920`);
-        // }
-    }
-    vw();
-
-    window.addEventListener(`resize`, function() {
-        vw();
-    });
-
-    function vh(){
-        const innerHeight = window.innerHeight;
-        document.documentElement.style.setProperty('--vh', `${innerHeight}px`);
-    }
-    vh();
-
-    window.addEventListener(`resize`, function() {
-        vw();
-    });
+    // window.addEventListener(`resize`, function() {
+    //     vw();
+    // });
 
     // main_slide
     const swiper = new Swiper(".main_slide", {
-        spaceBetween: 24,
+        // spaceBetween: 24,
         slidesPerView: 2,
         breakpoints: {
-            1200: {
-                spaceBetween: 24,
-            },
-            1300: {
-                spaceBetween: 40,
-            },
+            // 1200: {
+            //     spaceBetween: 24,
+            // },
+            // 1300: {
+            //     spaceBetween: 40,
+            // },
             // 1920: {
             //     spaceBetween: 40,
             // }
