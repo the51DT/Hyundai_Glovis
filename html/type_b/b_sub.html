@@ -34,7 +34,111 @@
 
 <div class="sub-wrap">
   <div class="main_box">
-    <div class="swiper car_slide">
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper carSwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div thumbsSlider="" class="swiper carSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_01.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_02.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_03.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_04.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_05.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_06.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_07.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_01.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_02.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_03.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_04.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_05.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_06.png" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../../assets/images/b_sub/thum_07.png" />
+        </div>
+      </div>
+    </div>
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+    <div class="thumbs-area">
+      <img src="../../assets/images/b_sub/car_thumbs_1920.png">
+    </div>
+    
+    <div class="button-box">
+      <a href="#" class="swipe-thumbs2"></a>
+      <div class="thumbs2-area">
+        <img src="../../assets/images/b_sub/car_thumbs2.png">
+      </div>
+    </div>
+    <!-- <div class="swiper car_slide">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
@@ -65,7 +169,7 @@
                 <img src="../../assets/images/b_sub/car_slide_01.png" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -103,28 +207,28 @@ window.addEventListener(`resize`, function() {
   vw();
 });
 
+// active
+$(".swipe-thumbs2").click(function(){
+    $(".thumbs2-area").toggleClass("active");
+})
+
 // car slide
-let swiper = new Swiper(".car_slide2", {
-    // spaceBetween: 4,
-      slidesPerView: "auto",
-      cssMode: true,
-      loop: true,
-      spaceBetween: 10,
-      slidesPerView: 4,
+var swiper = new Swiper(".carSwiper", {
+      spaceBetween: 0,
+      slidesPerView: 7,
       freeMode: true,
       watchSlidesProgress: true,
-});
-let swiper2 = new Swiper(".car_slide", {
+    });
+  var swiper2 = new Swiper(".carSwiper2", {
     spaceBetween: 10,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
     thumbs: {
-        swiper: swiper,
+      swiper: swiper,
     },
-});
-
+  });
 </script>
 </body>
 </html>
