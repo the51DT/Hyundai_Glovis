@@ -10,8 +10,12 @@
 <body>
     <div class="wrap">
         
-        <header onclick="popupToggle()"></header>
+        <header><a href="#"></a></header>
+
         <img src="../../assets/images/a_mobile/sub_mo.png" alt="">
+        <a class="sub_mo" href="../type_a/a_detail_MO.html"></a>
+
+        <button type="button" class="list_link" onclick="popupOpen()"></button>
 
         <section class="filter_popup">
             <div class="filter_top_wrap"></div>
@@ -433,13 +437,23 @@
     });
 
     // filter_popup
-    function popupToggle() {
-        document.querySelector("header").classList.toggle("active");
-        document.querySelector(".filter_popup").classList.toggle("active");
-        document.querySelector("body").classList.toggle("scroll_fixed");
-        document.querySelector(".wrap").classList.toggle("scroll_fixed");
+    function popupOpen() {
+        document.querySelector("header").classList.add("active");
+        document.querySelector(".filter_popup").classList.add("active");
+        document.querySelector("body").classList.add("scroll_fixed");
+        document.querySelector(".wrap").classList.add("scroll_fixed");
         window.scrollTo(0,0);
-    }
+    };
+
+    document.querySelector("header a").addEventListener("click", function(e){
+        e.preventDefault();
+        if(this.parentNode.classList.contains("active")){
+            document.querySelector("header").classList.remove("active");
+            document.querySelector(".filter_popup").classList.remove("active");
+            document.querySelector("body").classList.remove("scroll_fixed");
+            document.querySelector(".wrap").classList.remove("scroll_fixed");
+        }
+    })
 
     // accordion
     document.querySelectorAll(".acco_wrap").forEach(function(item){
