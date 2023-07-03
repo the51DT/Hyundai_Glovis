@@ -110,14 +110,8 @@ header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul li:hover {background: #F4F
 .fix-wrap2 {display:block; position: fixed; top: calc(100vw * 95 /var(--vw)); right: calc(100vw * 39 /var(--vw)); width:calc(100vw * 108 /var(--vw)); height: calc(100vw * 301 /var(--vw)); background:url(../images/b_sub/sublist_fix.png) no-repeat center / contain; transition:all 0.2s;}
 
 /* main_section */
-.sub-wrap {max-width: 1920px;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  position: absolute;
-  padding: 0 calc(100vw * 160 /var(--vw));
-  top: calc(100vw * 76 /var(--vw));}
-.main_box {    width: calc(100vw* 1600/var(--vw));}
+.sub-wrap {max-width: 1920px; width: 100%; height: 100%; z-index: 1; position: relative; padding: calc(100vw * 76 /var(--vw)) calc(100vw * 160 /var(--vw));}
+.main_box {width: calc(100vw* 1600/var(--vw));}
 .main_box::-webkit-scrollbar {display:none;}
 .main_box:nth-of-type(1) {left:0;}
 .main_box:nth-of-type(2) {right:0; margin-left:4rem;}
@@ -136,27 +130,6 @@ header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul li:hover {background: #F4F
 .car_list li + li::before {content:''; display:block; position:absolute; left:4rem; right:4rem; top:0; height:1px; border-top:1px solid #EAEAEA;}
 .car_list li:hover::before {display:none;}
 .car_list li:hover {background-color:#0077EB; transition:all 0.2s;}
-/* .car_list .thumb_area {width:20rem; height:11.2rem;}
-.car_list .thumb_area > img {display:block; width:100%;}
-.car_list .info_area {width:calc(100% - 22rem); padding:0.2rem 0 0.7rem;}
-.car_list .info_area .row {display:flex; justify-content:space-between;}
-.car_list .info_area .row:nth-of-type(1) {align-items:center; flex-wrap:wrap;}
-.car_list .info_area .row:nth-of-type(2) {align-items:flex-end; margin-top:1.2rem;}
-.car_list li:nth-child(4n+1) .badge {display:block; width:367.47px; height:20px; background:url(../images/a_sub/badge01.png) no-repeat left top / contain;}
-.car_list li:hover:nth-child(4n+1) .badge {display:block; width:367.47px; height:20px; background:url(../images/a_sub/badge01_hover.png) no-repeat left top / contain;}
-.car_list li:nth-child(4n+2) .badge {display:block; width:357.47px; height:20px; background:url(../images/a_sub/badge02.png) no-repeat left top / contain;}
-.car_list li:hover:nth-child(4n+2) .badge {display:block; width:357.47px; height:20px; background:url(../images/a_sub/badge02_hover.png) no-repeat left top / contain;}
-.car_list li:nth-child(4n+3) .badge {display:block; width:380.47px; height:20px; background:url(../images/a_sub/badge03.png) no-repeat left top / contain;}
-.car_list li:hover:nth-child(4n+3) .badge {display:block; width:380.47px; height:20px; background:url(../images/a_sub/badge03_hover.png) no-repeat left top / contain;}
-.car_list li:nth-child(4n+4) .badge {display:block; width:310px; height:20px; background:url(../images/a_sub/badge04.png) no-repeat left top / contain;}
-.car_list li:hover:nth-child(4n+4) .badge {display:block; width:380.47px; height:20px; background:url(../images/a_sub/badge04_hover.png) no-repeat left top / contain;}
-.car_list .heart {display:block; width:24px; height:24px; background:url(../images/a_sub/heart.png) no-repeat center / contain;}
-.car_list li:hover .heart {display:block; width:24px; height:24px; background:url(../images/a_sub/heart_hover.png) no-repeat center / contain;}
-.car_list .info {display:block; width:232px; height:66px; background:url(../images/a_sub/info.png) no-repeat center / contain;}
-.car_list li:hover .info {display:block; width:232px; height:66px; background:url(../images/a_sub/info_hover.png) no-repeat center / contain;}
-.car_list .price {display:block; width:122px; height:42px; background:url(../images/a_sub/price.png) no-repeat center / contain;}
-.car_list li:hover .price {display:block; width:122px; height:42px; background:url(../images/a_sub/price_hover.png) no-repeat center / contain;} */
-
 .car_slide {margin-top:2rem; cursor:pointer;}
 .car_slide .swiper-slide {border-radius:1.2rem; overflow:hidden;}
 .car_slide .swiper-slide > img {display:block; width:100%;}
@@ -168,15 +141,11 @@ header .pc1920 .gnb-wrap .button-box .gnb-dropdown ul li:hover {background: #F4F
 .car_slide2 .swiper-slide-thumb-active {opacity:1;}
 .car_slide2 .swiper-slide > img {display:block; width:100%;}
 
-.bottom_section {position:fixed; display:flex; gap:0.8rem; bottom:2rem; right:2rem; width:calc(100vw*780/var(--vw)); padding:1.6rem 4rem; border-radius:2rem; background-color:#fff; box-shadow:0 0.5rem 2rem rgba(0,0,0,0.15); z-index:999;}
-.bottom_section .item {display:flex; align-items:center; gap:1rem;}
-.bottom_section .item_tit {color:#666; font-size:1.4rem; line-height:2rem; white-space:nowrap;}
-.bottom_section .item_txt {color:#000; font-size:2rem; font-weight:600; line-height:1; white-space:nowrap;}
-.bottom_section .input_item {display:flex; align-items:center; gap:1rem; flex:auto; min-width:40%; margin-left:1rem;}
-.input_item .input_tit {color:#666; font-size:1.4rem; line-height:2rem; white-space:nowrap;}
-.input_item input {width:clamp(10rem, 85%, 28rem); padding:1.5rem 2.3rem; border:1px solid #000; border-radius:0.4rem; color:#000; font-size:1.6rem; line-height:1;}
-.input_item input::placeholder {color:#999;}
-.btn_primary {width:clamp(10rem, 30%, 20.7rem); border-radius:0.4rem; background-color:#007AFF; color:#fff; font-size:1.4rem; font-weight:bold; line-height:4.8rem;}
+.main-wrap {max-width: 1920px; width: 100%; height: 100%; z-index: 1; display: flex; position: relative; padding: 0 calc(100vw * 160 /var(--vw)) calc(100vw * 160 /var(--vw)) calc(100vw * 160 /var(--vw)); gap: calc(100vw * 30 /var(--vw));}
+.main-wrap .left-area img {width:calc(100vw * 1057 /var(--vw)); height:calc(100vw * 4130 /var(--vw));}
+.main-wrap .right-area {height:calc(100vw * 4130 /var(--vw));}
+.main-wrap .right-area img {top: calc(100vw * 94 /var(--vw)); position: sticky; width:calc(100vw * 513 /var(--vw)); height:calc(100vw * 849 /var(--vw));}
+/* .main_box {width: calc(100vw* 1600/var(--vw));} */
 
 
 @media (max-width: 1200px) {
