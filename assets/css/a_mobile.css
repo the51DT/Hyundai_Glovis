@@ -1,6 +1,80 @@
 @charset "utf-8";
 
-.wrap {width:calc(100vw*360/var(--vw)); margin:0 auto;}
+.scroll_fixed {height:100vh;}
+body::-webkit-scrollbar {display:none;}
+.wrap {position:relative; width:36rem; margin:0 auto; box-shadow:0 0.5rem 2rem rgba(0,0,0,0.25); overflow:hidden;}
 .wrap > img {display:block; width:100%;}
-header {position:fixed; left:0; right:0; width:calc(100vw*360/var(--vw)); margin:0 auto;}
+header {position:fixed; left:0; right:0; width:36rem; height:7.6rem; margin:0 auto; background:url(../images/a_mobile/sub_header_mo.png) no-repeat 0 0 / contain; z-index:9999; cursor:pointer;}
+header.active {background:url(../images/a_mobile/sub_header_mo_active.png) no-repeat 0 0 / contain;}
 header > img {display:block; width:100%;}
+
+.filter_popup {position:absolute; left:0; right:0; top:7.6rem; bottom:0; transform:translateX(36rem); width:36rem; margin:0 auto; padding:3.2rem; z-index:100; background-color:#fff; overflow-y:auto;  transition:all 0.2s;}
+.filter_popup.active {transform:translateX(0);}
+.filter_top_wrap {width:100%; height:2.8rem; background:url(../images/a_mobile/filter_top.png) no-repeat left top / auto 2.8rem;}
+
+/* accordion */
+.acco_wrap {margin-top:2rem; border-top:1px solid #E8EBF0;}
+.acco_wrap + .acco_wrap {margin-top:-1px;}
+.acco_wrap .acco_head {position:relative; width:100%; padding:2.4rem 0; border-bottom:1px solid #E8EBF0; color:#000; font-size:1.6rem; font-weight:bold; line-height:2rem; text-align:left;}
+.acco_wrap .acco_head::after {content:''; display:block; position:absolute; top:2.4rem; right:0; width:2rem; height:2rem; background:url(../images/a_sub/btn_acco.png) no-repeat center / contain; transition:all 0.2s;}
+.acco_wrap.active .acco_head::after {transform:rotate(180deg); transition:all 0.2s;}
+.acco_wrap .acco_cont {height:0; overflow:hidden; transition:all 0.2s;}
+.acco_wrap.active .acco_cont {height:auto; padding:3.2rem 0; border-bottom:1px solid #E8EBF0; transition:all 0.2s;}
+.acco_wrap .acco_cont > img {width:100%;}
+
+/* checkbox */
+.check_tit {color:#0077EB; font-size:1.6rem; font-weight:600;}
+.check_tit ~ .check_tit {margin-top:2.8rem;}
+.check_tit + .check_wrap {margin-top:1.2rem;}
+.check_wrap {display:flex; flex-wrap:wrap;}
+.check_wrap.col2 .check_item {flex: 0 0 50%;}
+.check_wrap.row {flex-direction:column; margin-top:-1rem; margin-bottom:-1.6rem;}
+.check_wrap.row .check_item label {padding:1.6rem 0;}
+.check_sub_wrap li {padding-left:0;}
+.check_sub_wrap .sub {display:none;}
+.check_sub_wrap .sub li {padding-left:2rem;}
+.check_item {flex:0 0 calc(100% / 3);}
+.check_item input {position:absolute; width:0; height:0; margin:0; font-size:0; text-indent:-9999%; overflow:hidden;}
+.check_item label {position:relative; display:block; padding:1.2rem 0; cursor:pointer;}
+.check_item .label {position:relative; display:inline-block; padding-left:3.2rem; color:#000; font-size:1.6rem; line-height:2rem;}
+.check_item .label::before {content:''; display:block; position:absolute; left:0; top:0; width:2rem; height:2rem; border:1px solid #bbb; border-radius:0.4rem; box-sizing:border-box;}
+.check_item input:checked + .label {font-weight:600;}
+.check_item input:checked + .label::before {border:0; background:#007AFF url(../images/a_sub/ico_check.svg) no-repeat center / 1.2rem;}
+.check_item.icon label {padding-right:4.4rem;}
+.check_item label .icon {display:block; position:absolute; top:0.6rem; right:0; width:4rem; height:4rem;}
+.check_item label .icon.icon_all {background:url(../images/a_sub/icon_all.png) no-repeat center / contain;}
+.check_item label .icon.icon_etc {background:url(../images/a_sub/icon_etc.png) no-repeat center / contain;}
+.check_item label .icon.icon_car01 {background:url(../images/a_sub/car01.png) no-repeat center / contain;}
+.check_item label .icon.icon_car02 {background:url(../images/a_sub/car02.png) no-repeat center / contain;}
+.check_item label .icon.icon_car03 {background:url(../images/a_sub/car03.png) no-repeat center / contain;}
+.check_item label .icon.icon_car04 {background:url(../images/a_sub/car04.png) no-repeat center / contain;}
+.check_item label .icon.icon_car05 {background:url(../images/a_sub/car05.png) no-repeat center / contain;}
+.check_item label .icon.icon_car06 {background:url(../images/a_sub/car06.png) no-repeat center / contain;}
+.check_item label .icon.icon_car07 {background:url(../images/a_sub/car07.png) no-repeat center / contain;}
+.check_item label .icon.icon_car08 {background:url(../images/a_sub/car08.png) no-repeat center / contain;}
+.check_item label .icon.icon_car09 {background:url(../images/a_sub/car09.png) no-repeat center / contain;}
+.check_item label .icon.icon_car10 {background:url(../images/a_sub/car10.png) no-repeat center / contain;}
+
+/* select */
+.select_tit {display:block; margin-bottom:0.8rem; color:#999; font-size:1.4rem; line-height:1;}
+.select {position:relative;}
+.select_tit ~.select_tit {margin-top:2rem;}
+.select::after {content:''; display:block; position:absolute; top:50%; right:2rem; transform:translateY(-50%); width:1.4rem; height:1.4rem; background:url(../images/a_sub/icon_select.png) no-repeat center / contain;}
+.select select {display:block; width:100%; padding:1.5rem 2.3rem; border:1px solid #000; border-radius:0.4rem; color:#000; font-size:1.6rem; line-height:1; appearance:none; cursor:pointer;}
+
+/* car_slide */
+.car_slide {margin:0 3.2rem; cursor:pointer;}
+.car_slide .swiper-slide {border-radius:1.2rem; overflow:hidden;}
+.car_slide .swiper-slide > img {display:block; width:100%;}
+.car_slide .btn_wrap {position:absolute; right:1rem; bottom:1rem; width:8.4rem; height:4rem;}
+.car_slide .btn_wrap > img {display:block; width:100%;}
+.car_slide2 {margin:0.2rem 3.2rem -3.2rem; padding-bottom:5.6rem; border-bottom:1px solid #E8EBF0; cursor:pointer;}
+.car_slide2 .swiper-wrapper {flex-wrap:wrap; width:calc(100% + 0.4rem); margin-left:-0.2rem;}
+.car_slide2 .swiper-slide {width:calc(20% - 0.4rem); margin:0.2rem; border-radius:0.8rem; overflow:hidden; opacity:0.3;}
+.car_slide2 .swiper-slide-thumb-active {opacity:1;}
+.car_slide2 .swiper-slide > img {display:block; width:100%;}
+
+.btm_fixed_section {position:fixed; display:flex; flex-direction:column; align-items:flex-end; left:0; right:0; bottom:0; width:36rem; margin:0 auto;}
+.btm_fixed_section > img {width:100%;}
+.btm_fixed_section > img.btm {border-radius:2rem 2rem 0 0; box-shadow:0 0.5rem 2rem rgba(0,0,0,0.25); overflow:hidden;}
+.btm_fixed_section > img.btn {width:9.4rem; height:9.4rem;}

@@ -654,17 +654,19 @@
                     <img class="pc_1600" src="../../assets/images/a_sub/sub_detail_03_1600.png" alt="">
                     <img class="pc_1200" src="../../assets/images/a_sub/sub_detail_03_1920.png" alt="">
                     
-                    <div class="bottom_section">
-                        <div class="item">
-                            <span class="item_tit">시작가</span>
-                            <span class="item_txt">4,899만원</span>
+                    <div class="btm_fixed_wrap">
+                        <div class="bottom_section">
+                            <div class="item">
+                                <span class="item_tit">시작가</span>
+                                <span class="item_txt">4,899만원</span>
+                            </div>
+                            <div class="input_item">
+                                <span class="input_tit">입찰가</span>
+                                <input type="text" placeholder="입찰가를 입력해주세요.">
+                            </div>
+                            <button type="button" class="btn_primary">부재자 응찰</button>
+                            <!-- <img src="../../assets/images/a_sub/bottom_sheet.png" alt=""> -->
                         </div>
-                        <div class="input_item">
-                            <span class="input_tit">입찰가</span>
-                            <input type="text" placeholder="입찰가를 입력해주세요.">
-                        </div>
-                        <button type="button" class="btn_primary">부재자 응찰</button>
-                        <!-- <img src="../../assets/images/a_sub/bottom_sheet.png" alt=""> -->
                     </div>
                 </div>
 
@@ -733,17 +735,6 @@
         // spaceBetween: 4,
         slidesPerView: "auto",
         cssMode: true,
-        // breakpoints: {
-        //     1200: {
-        //         spaceBetween: 4,
-        //     },
-        //     1600: {
-        //         spaceBetween: 6,
-        //     },
-        //     1920: {
-        //         spaceBetween: 4,
-        //     }
-        // }
     });
     let swiper2 = new Swiper(".car_slide", {
         spaceBetween: 20,

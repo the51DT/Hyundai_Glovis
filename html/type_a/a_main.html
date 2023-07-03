@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A안 메인</title>
+    <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/a_main.css">
+    <script src="../../assets/js/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="wrap">
@@ -28,11 +30,54 @@
                             <img src="../../assets/images/a_main/calendar_1600.png" alt="">
                         </a>
                     </div>
+                    <div class="pc_1200">
+                        <a href="#" id="popOpen">
+                            <img src="../../assets/images/a_main/calendar_1600.png" alt="">
+                        </a>
+                    </div>
                 </div>
             </section>
 
             <section class="main_section">
-                <div class="main_box"></div>
+                <div class="main_box">
+                    <img class="pc" src="../../assets/images/a_main/main_box_01.png" alt="">
+                    <img class="pc_1600" src="../../assets/images/a_main/main_box_01_1600.png" alt="">
+                    <img class="pc_1200" src="../../assets/images/a_main/main_box_01_1200.png" alt="">
+                    
+                    <div class="swiper main_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="pc" src="../../assets/images/a_main/mainbox_slide_01.png" alt="">
+                                <img class="pc_1600" src="../../assets/images/a_main/mainbox_slide_01_1600.png" alt="">
+                                <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_01_1200.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="pc" src="../../assets/images/a_main/mainbox_slide_01.png" alt="">
+                                <img class="pc_1600" src="../../assets/images/a_main/mainbox_slide_01_1600.png" alt="">
+                                <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_01_1200.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="pc" src="../../assets/images/a_main/mainbox_slide_01.png" alt="">
+                                <img class="pc_1600" src="../../assets/images/a_main/mainbox_slide_01_1600.png" alt="">
+                                <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_01_1200.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="pc" src="../../assets/images/a_main/mainbox_slide_02.png" alt="">
+                                <img class="pc_1600" src="../../assets/images/a_main/mainbox_slide_02_1600.png" alt="">
+                                <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_01_1200.png" alt="">
+                            </div>
+                        </div>
+                        
+                        <div class="slide_btns">
+                            <button type="button" class="btn_prev"></button>
+                            <button type="button" class="btn_next"></button>
+                        </div>
+                    </div>
+                    
+                    <img class="pc" src="../../assets/images/a_main/main_box_02.png" alt="">
+                    <img class="pc_1600" src="../../assets/images/a_main/main_box_02_1600.png" alt="">
+                    <img class="pc_1200" src="../../assets/images/a_main/main_box_02_1200.png" alt="">
+                </div>
             </section>
         </div>
     </div>
@@ -54,6 +99,43 @@
 <script>
     "use strict";
 
+    // vw
+    function vw(){
+        const innerWidth = window.innerWidth;
+        if(innerWidth > 1920){
+            document.documentElement.style.setProperty('--vw', `${innerWidth}`);
+        } else if(1600 < innerWidth <= 1920){
+            document.documentElement.style.setProperty('--vw', `1920`);
+        }
+    }
+    vw();
+
+    window.addEventListener(`resize`, function() {
+        vw();
+    });
+
+    // main_slide
+    const swiper = new Swiper(".main_slide", {
+        spaceBetween: 24,
+        slidesPerView: 2,
+        breakpoints: {
+            1200: {
+                spaceBetween: 24,
+            },
+            1300: {
+                spaceBetween: 40,
+            },
+            // 1920: {
+            //     spaceBetween: 40,
+            // }
+        },
+        navigation: {
+            prevEl: ".btn_prev",
+            nextEl: ".btn_next",
+        },
+    });
+
+    // popup
     document.getElementById("popOpen").addEventListener("click", (e)=>{
         e.preventDefault();
         document.querySelector(".popup").classList.add("active");
