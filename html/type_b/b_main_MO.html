@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autobell_B_main Mobile</title>
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/a_mobile.css">
+</head>
+<body>
+    <div class="wrap">
+        
+        <header class="typeB"><img src="../../assets/images/b_mobile/main_header_mo.png" alt=""></header>
+        <a class="main_mo" href="../type_b/b_sub_MO.html">
+            <img src="../../assets/images/b_mobile/main_mo.png" alt="">
+        </a>
+
+        <div class="btm_fixed_section">
+            <a href="./b_sub_MO.html" class="list"></a>
+            <a href="./b_main_MO.html" class="main"></a>
+            <img src="../../assets/images/b_mobile/b_appbar.png" alt="">
+        </div>
+
+    </div>
+
+
+<script>
+    "use strict";
+    
+    // vw
+    function vw(){
+        const innerWidth = window.innerWidth;
+        if(innerWidth < 1920){
+            document.documentElement.style.setProperty('--vw', `1920`);
+        } else {
+            document.documentElement.style.setProperty('--vw', `${innerWidth}`);
+        }
+    }
+    vw();
+
+    window.addEventListener(`resize`, function() {
+        vw();
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>autobell_B_sub Mobile</title>
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/a_mobile.css">
+</head>
+<body>
+    <div class="wrap">
+
+        <header class="typeB"><a href="#"><img src="../../assets/images/b_mobile/sub_header_mo.png" alt=""></a></header>
+        
+        <img src="../../assets/images/b_mobile/sub_mo.png" alt="">
+        <a class="sub_mo typeB" href="../type_b/b_detail_MO.html"></a>
+
+        <button type="button" class="list_link typeB" onclick="popupOpen()"></button>
+
+        <div class="filter_popup typeB">
+            <a href="#" class="filter_header"></a>
+            <img src="../../assets/images/b_mobile/sub_filter.png" alt="">
+        </div>
+
+        <div class="btm_fixed_section typeB">
+            <a href="./b_sub_MO.html" class="list"></a>
+            <a href="./b_main_MO.html" class="main"></a>
+            <img src="../../assets/images/b_mobile/b_appbar.png" alt="">
+        </div>
+
+    </div>
+
+
+<script>
+    "use strict";
+    
+    // vw
+    function vw(){
+        const innerWidth = window.innerWidth;
+        if(innerWidth < 1920){
+            document.documentElement.style.setProperty('--vw', `1920`);
+        } else {
+            document.documentElement.style.setProperty('--vw', `${innerWidth}`);
+        }
+    }
+    vw();
+
+    window.addEventListener(`resize`, function() {
+        vw();
+    });
+
+    // filter_popup
+    function popupOpen() {
+        document.querySelector("header").classList.add("active");
+        document.querySelector(".filter_popup").classList.add("active");
+        document.querySelector("body").classList.add("scroll_fixed");
+        document.querySelector(".wrap").classList.add("scroll_fixed");
+        window.scrollTo(0,0);
+    };
+
+    document.querySelector(".filter_header").addEventListener("click", function(e){
+        e.preventDefault();
+        if(this.parentNode.classList.contains("active")){
+            document.querySelector("header").classList.remove("active");
+            document.querySelector(".filter_popup").classList.remove("active");
+            document.querySelector("body").classList.remove("scroll_fixed");
+            document.querySelector(".wrap").classList.remove("scroll_fixed");
+        }
+    })
+
+</script>
+</body>
+</html>

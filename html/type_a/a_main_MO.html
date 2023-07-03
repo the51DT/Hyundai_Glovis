@@ -10,8 +10,9 @@
 <body>
     <div class="wrap">
         
-        <header><img src="../../assets/images/a_mobile/main_header_mo.png" alt=""></header>
+        <header><a href="../../index.html"><img src="../../assets/images/a_mobile/main_header_mo.png" alt=""></a></header>
         <img src="../../assets/images/a_mobile/main_mo.png" alt="">
+        <a class="main_mo" href="../type_a/a_sub_MO.html"></a>
 
     </div>
 
@@ -20,19 +21,15 @@
     "use strict";
     
     // vw
-    function vw(){
-        const innerWidth = window.innerWidth;
-        if(innerWidth < 1920){
-            document.documentElement.style.setProperty('--vw', `1920`);
-        } else {
-            document.documentElement.style.setProperty('--vw', `${innerWidth}`);
-        }
-    }
-    vw();
+    // function vw(){
+    //     const innerWidth = window.innerWidth;
+    //     document.documentElement.style.setProperty('--vw', `${innerWidth}`);
+    // }
+    // vw();
 
-    window.addEventListener(`resize`, function() {
-        vw();
-    });
+    // window.addEventListener(`resize`, function() {
+    //     vw();
+    // });
 
 </script>
 </body>
