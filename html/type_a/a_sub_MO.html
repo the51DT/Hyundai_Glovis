@@ -10,7 +10,7 @@
 <body>
     <div class="wrap">
         
-        <header><a href="#"></a></header>
+        <header><a href="./a_main_MO.html" class="subMo"></a></header>
 
         <img src="../../assets/images/a_mobile/sub_mo.png" alt="">
         <a class="sub_mo" href="../type_a/a_detail_MO.html"></a>
@@ -18,7 +18,10 @@
         <button type="button" class="list_link" onclick="popupOpen()"></button>
 
         <section class="filter_popup">
-            <div class="filter_top_wrap"></div>
+            <div class="filter_top_wrap">
+                <img class="filter_top" src="../../assets/images/a_mobile/filter_top.png" alt="">
+                <span class="filter_menu"></span>
+            </div>
     
             <div class="acco_wrap">
                 <button type="button" class="acco_head">경매 정보</button>
@@ -445,9 +448,8 @@
         window.scrollTo(0,0);
     };
 
-    document.querySelector("header a").addEventListener("click", function(e){
-        e.preventDefault();
-        if(this.parentNode.classList.contains("active")){
+    document.querySelector("header").addEventListener("click", function(){
+        if(this.classList.contains("active")){
             document.querySelector("header").classList.remove("active");
             document.querySelector(".filter_popup").classList.remove("active");
             document.querySelector("body").classList.remove("scroll_fixed");
