@@ -75,7 +75,7 @@ header nav .right .profile .pf-accordion img {width:calc(100vw * 44 / 1920); hei
 #rightSection .pc1920 .slide-wrap .slider_wrapper .slides li .slide-img2.active {background:url(../images/b_main/main-slide2_active.png) no-repeat left top / contain;}
 #rightSection .pc1920 .slide-wrap .slider_wrapper .slides li .slide-img3.active {background:url(../images/b_main/main-slide3_active.png) no-repeat left top / contain;}
 #rightSection .pc1920 .slide-wrap .slider_wrapper .slides li .slide-img4.active {background:url(../images/b_main/main-slide4_active.png) no-repeat left top / contain;}
-#rightSection .pc1920 .slide-wrap .slider_wrapper .slides li .slide-img5.active {background:url(../images/b_main/main-slide5.png) no-repeat left top / contain;}
+#rightSection .pc1920 .slide-wrap .slider_wrapper .slides li .slide-img5.active {background:url(../images/b_main/main-slide5_active.png) no-repeat left top / contain;}
 
 #rightSection .pc1920 .slide-wrap .slider_wrapper .slides li .button-box {display: flex; gap: calc(100vw * 9 / 1920); position: relative; top: calc(100vw * -67 / 1920); right: calc(100vw * -23 / 1920);}
 #rightSection .pc1920 .slide-wrap .slider_wrapper .slides li .button-box a {display: block; width: calc(100vw * 149 / 1920); height: calc(100vw * 44 / 1920);}
