@@ -19,8 +19,8 @@
 /* aside_section  */
 .aside_section {position:absolute; top:12.8rem; left:0; bottom:0; width:calc(100vw*360/var(--vw)); padding:0 4rem 12.8rem; overflow-y:auto;}
 .aside_section::-webkit-scrollbar {display:none;}
-.aside_top_wrap {width:100%; height:6.4rem; margin-bottom:2rem; background:url(../images/a_sub/aside_top.png) no-repeat left top / contain;}
-.filter_img_wrap {width:100%; height:6.8rem; margin:2rem 0 3.2rem; background:url(../images/a_sub/filter_menu_1920.png) no-repeat left top / contain;}
+.aside_top_wrap {width:100%; height:6.4rem; background:url(../images/a_sub/aside_top.png) no-repeat left bottom / contain;}
+.filter_img_wrap {width:100%; height:6.8rem; margin:2rem 0 3.2rem; background:url(../images/a_sub/filter_menu_1920.png) no-repeat left center / contain;}
 .filter_open {display:none;}
 
 /* accordion */
@@ -146,7 +146,7 @@
 
     /* aside_section */
     .aside_section {width:calc(100vw*304/1600); padding:0 calc(100vw*20/1600) 0 calc(100vw*40/1600);}
-    .filter_img_wrap {height:calc(100vw*68/1600); margin:calc(100vw*20/1600) 0 calc(100vw*32/1600); background:url(../images/a_sub/filter_menu_1600.png) no-repeat left top / contain;}
+    .filter_img_wrap {margin:calc(100vw*20/1600) 0 calc(100vw*32/1600); background:url(../images/a_sub/filter_menu_1600.png) no-repeat left center / contain;}
     .check_item {flex:0 0 50%;}
     .check_wrap.col2 .check_item {flex:0 0 100%;}
 
@@ -198,6 +198,7 @@
     .aside_section {position:absolute; width:38.4rem; left:-100%; padding:0 4.4rem; z-index:200; background-color:#fff; transition:all 0.2s;}
     .aside_section.active {display:block; left:0.8rem; transition:all 0.2s;}
     .aside_top_wrap {width:100%; height:10.4rem; margin-bottom:2rem; background:url(../images/a_sub/filter_1200.png) no-repeat left bottom / 23.4rem 2.8rem;}
+    .filter_img_wrap {margin:2rem 0 3.2rem;}
     .filter_open {display:block; width:100%; height:4.4rem; background:url(../images/a_sub/list_top_1200.png) no-repeat center top / 100%;}
     .aside_top_wrap .btn_close {position:absolute; top:0; right:4.4rem; width:2.4rem; height:2.4rem; background:url(../images/a_sub/btn_close.png) no-repeat center / contain;}
 
