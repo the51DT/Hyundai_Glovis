@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>현대글로비스 제안 게이트페이지</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
  <style>
         html,body{ 
             height: 100%;
@@ -46,19 +45,43 @@
             flex-flow: column;
         }
         .title{
-            margin-bottom: 140px;
+            margin-bottom: 184px;
         }
         .title img{
             max-width: 286px;
             width: 100%;
         }
         .type_box{
-            text-align: center;
-            background: #FFFFFF;
-            box-shadow: 0px 4px 16px rgba(36, 45, 60, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            padding:31px 39px;
+            border: 1px solid #EAEAEA;
             border-radius: 16px;
         }
-        .flex a:nth-of-type(1) div{
+        .type_box.typeA {
+            background: url(./assets/images/typeA.png) no-repeat;
+            background-position: left 40px top 50%;
+            background-size: 272px 54px;
+        }
+        .type_box.typeB {
+            margin-top: 16px;
+            background: url(./assets/images/typeB.png) no-repeat;
+            background-position: left 40px top 50%;
+            background-size: 307px 54px;
+        }
+        .type_box > .btn {
+            display: block;
+            width: 120px;
+            height: 44px;
+            margin-left: auto;
+            border-radius: 10px;
+        }
+        .type_box > .btn > img {
+            display: block;
+            width: 100%;
+        }
+        /* .flex a:nth-of-type(1) div{
             padding: 27px 40px 39px;
         }
         .flex a:nth-of-type(2) div{
@@ -79,7 +102,7 @@
             max-height: 114px;
             min-width: 130px;
             width: 100%;
-        }
+        } */
     </style>
   </head>
   <body>
@@ -100,16 +123,23 @@
                         <div class="title">
                             <img src="./assets/images/title.png">
                         </div>
-                        <a href="./html/type_a/a_main.html" target="_blank">
-                            <div class="type_box">
-                                <img src="./assets/images/btn_type_a.png">
-                            </div>
-                        </a>
-                        <a href="./html/type_b/b_main.html" target="_blank">
-                            <div class="type_box">
-                                <img src="./assets/images/btn_type_b.png">
-                            </div>
-                        </a>
+                        <div class="type_box typeA">
+                            <a class="btn" href="./html/type_a/a_main.html" target="_blank">
+                                <img src="./assets/images/btn_pc.png" alt="">
+                            </a>
+                            <a class="btn" href="./html/type_a/a_main_MO.html" target="_blank">
+                                <img src="./assets/images/btn_mo.png" alt="">
+                            </a>
+                        </div>
+
+                        <div class="type_box typeB">
+                            <a class="btn" href="./html/type_a/a_main.html" target="_blank">
+                                <img src="./assets/images/btn_pc.png" alt="">
+                            </a>
+                            <a class="btn" href="./html/type_a/a_main_MO.html" target="_blank">
+                                <img src="./assets/images/btn_mo.png" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
