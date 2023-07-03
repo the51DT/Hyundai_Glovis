@@ -43,6 +43,7 @@
         .flex{
             display: flex;
             flex-flow: column;
+            gap: 16px;
         }
         .title{
             margin-bottom: 184px;
@@ -53,31 +54,42 @@
         }
         .type_box{
             display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
+            justify-content: space-between;
+            align-items: center;
             padding:31px 39px;
             border: 1px solid #EAEAEA;
             border-radius: 16px;
         }
-        .type_box.typeA {
-            background: url(./assets/images/typeA.png) no-repeat;
-            background-position: left 40px top 50%;
-            background-size: 272px 54px;
+        @media screen and (max-width:500px) {
+            .type_box{
+                gap: 12px;
+                flex-direction: column;
+            }
+            .type_box .btn.pc {
+                display: none;
+            }
         }
-        .type_box.typeB {
-            margin-top: 16px;
-            background: url(./assets/images/typeB.png) no-repeat;
-            background-position: left 40px top 50%;
-            background-size: 307px 54px;
+        .type_box .btns{
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
         }
-        .type_box > .btn {
+        .type_box.typeA > img {
+            width: 272px;
+            height: 54px;
+        }
+        .type_box.typeB > img {
+            width: 307px;
+            height: 54px;
+        }
+        .type_box .btn {
             display: block;
             width: 120px;
             height: 44px;
             margin-left: auto;
             border-radius: 10px;
         }
-        .type_box > .btn > img {
+        .type_box .btn > img {
             display: block;
             width: 100%;
         }
@@ -124,21 +136,27 @@
                             <img src="./assets/images/title.png">
                         </div>
                         <div class="type_box typeA">
-                            <a class="btn" href="./html/type_a/a_main.html" target="_blank">
-                                <img src="./assets/images/btn_pc.png" alt="">
-                            </a>
-                            <a class="btn" href="./html/type_a/a_main_MO.html" target="_blank">
-                                <img src="./assets/images/btn_mo.png" alt="">
-                            </a>
+                            <img src="./assets/images/typeA.png" alt="">
+                            <div class="btns">
+                                <a class="btn pc" href="./html/type_a/a_main.html" target="_blank">
+                                    <img src="./assets/images/btn_pc.png" alt="">
+                                </a>
+                                <a class="btn" href="./html/type_a/a_main_MO.html" target="_blank">
+                                    <img src="./assets/images/btn_mo.png" alt="">
+                                </a>
+                            </div>
                         </div>
 
                         <div class="type_box typeB">
-                            <a class="btn" href="./html/type_a/a_main.html" target="_blank">
-                                <img src="./assets/images/btn_pc.png" alt="">
-                            </a>
-                            <a class="btn" href="./html/type_a/a_main_MO.html" target="_blank">
-                                <img src="./assets/images/btn_mo.png" alt="">
-                            </a>
+                            <img src="./assets/images/typeB.png" alt="">
+                            <div class="btns">
+                                <a class="btn pc" href="./html/type_b/b_main.html" target="_blank">
+                                    <img src="./assets/images/btn_pc.png" alt="">
+                                </a>
+                                <a class="btn" href="./html/type_b/b_main_MO.html" target="_blank">
+                                    <img src="./assets/images/btn_mo.png" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
