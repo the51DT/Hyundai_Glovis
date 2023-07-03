@@ -25,6 +25,8 @@ header a img {display:block; width:100%;}
 .filter_popup.active {transform:translateX(0);}
 .filter_top_wrap {width:100%; height:2.8rem; background:url(../images/a_mobile/filter_top.png) no-repeat left top / auto 2.8rem;}
 .filter_popup.typeB {top:0; padding:0;}
+.filter_popup.typeB.active {z-index:10000;}
+.filter_popup.typeB .filter_header {position:fixed; display:block; left:0; right:0; width:36rem; height:6.3rem; margin:0 auto;}
 .filter_popup.typeB > img {width:100%;}
 
 /* accordion */
