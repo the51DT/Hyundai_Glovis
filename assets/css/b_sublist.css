@@ -29,7 +29,7 @@ header .pc1920 .gnb-wrap .button-box .sub {position: absolute; width: calc(100vw
 .sublist-wrap {padding-top: calc(100vw * 160 /var(--vw)); max-width: 1920px; display: flex; position:relative; width:100%; height:100%; z-index: 0;}
 
 /* ---- aside section ---- */
-.aside_section {position:fixed; top: calc(100vw * 160 /var(--vw)); left: calc(100% - var(--vw)); bottom: 0; width: calc(100vw*390/var(--vw)); margin: calc(100vw * 40 /var(--vw)) calc(100vw * 18 /var(--vw)) calc(100vw * 40 /var(--vw)) calc(100vw * 160 /var(--vw)); overflow-y:auto;}
+.aside_section {position:fixed; top: calc(100vw * 160 /var(--vw)); bottom: 0; width: calc(100vw*390/var(--vw)); margin: calc(100vw * 40 /var(--vw)) calc(100vw * 18 /var(--vw)) calc(100vw * 40 /var(--vw)) calc(100vw * 160 /var(--vw)); overflow-y:auto;}
 .aside_section::-webkit-scrollbar {margin-left: calc(100vw * 5 /var(--vw)); display: block;}
 .aside_top_wrap {width:100%; height:5rem; background:url(../images/b_sub/aside_top.png) no-repeat left top / contain;}
 .aside_section .btm_btn {display:block; width:calc(100vw * 80 /var(--vw)); height:calc(100vw * 33 /var(--vw)); margin:calc(100vw * 20 /var(--vw)) 0 0 auto;}

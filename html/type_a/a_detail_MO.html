@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="../../assets/css/reset.css">
     <link rel="stylesheet" href="../../assets/css/a_mobile.css">
+    <script src="../../assets/js/jquery-3.6.4.min.js"></script>
     <script src="../../assets/js/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <div class="wrap" style="padding-bottom:21.5rem;">
+    <div class="wrap detail" style="padding-bottom:21.5rem;">
         
         <header></header>
         <img src="../../assets/images/a_mobile/detail_mo_01.png" alt="">
@@ -172,6 +173,11 @@
         </div>
 
         <img src="../../assets/images/a_mobile/detail_mo_02.png" alt="">
+        
+        <div class="sticky">
+            <img src="../../assets/images/a_mobile/detail_mo_03.png" alt="">
+        </div>
+        <img style="margin-top:6rem;" src="../../assets/images/a_mobile/detail_mo_04.png" alt="">
 
         <div class="btm_fixed_section">
             <img class="btn" src="../../assets/images/a_mobile/btm_fixed_btn.png" alt="">
@@ -253,6 +259,53 @@
             swiper: swiper,
         },
     });
+
+    window.addEventListener("mousewheel", function(e){
+        // scroll down
+        if(e.deltaY > 0){
+            document.querySelector(".btm_fixed_section").classList.add("active");
+        } 
+        // scroll up
+        else {
+            document.querySelector(".btm_fixed_section").classList.remove("active");
+        }
+    })
+
+    let initialX = null,
+    initialY = null;
+
+    function initTouch(e) {
+    initialX = `${e.touches ? e.touches[0].clientX : e.clientX}`;
+    initialY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
+    };
+
+    function swipeDirection(e) {
+    if (initialX !== null && initialY !== null) {
+        const currentX = `${e.touches ? e.touches[0].clientX : e.clientX}`,
+        currentY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
+
+        let diffX = initialX - currentX,
+        diffY = initialY - currentY;
+
+        Math.abs(diffX) > Math.abs(diffY)
+        ? (
+            0 < diffX
+                ? console.log("to left")
+                : console.log("to right")
+        )
+        : (
+            0 < diffY
+                ? document.querySelector(".btm_fixed_section").classList.add("active")
+                : document.querySelector(".btm_fixed_section").classList.remove("active")
+        )
+
+        initialX = null;
+        initialY = null;
+    }
+    }
+
+    window.addEventListener("touchstart", initTouch);
+    window.addEventListener("touchmove", swipeDirection);
 
 </script>
 </body>

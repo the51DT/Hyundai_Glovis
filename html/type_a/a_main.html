@@ -13,7 +13,7 @@
     <div class="wrap">
         <header class="header">
             <div class="header_inner">
-                <h1 class="logo"></h1>
+                <h1 class="logo"><a href="../../index.html"></a></h1>
                 <nav class="header_nav"><a href="a_sub.html" target="_blank"></a></nav>
             </div>
         </header>
@@ -52,19 +52,19 @@
                                 <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_01_1200.png" alt="">
                             </div>
                             <div class="swiper-slide">
-                                <img class="pc" src="../../assets/images/a_main/mainbox_slide_01.png" alt="">
-                                <img class="pc_1600" src="../../assets/images/a_main/mainbox_slide_01_1600.png" alt="">
-                                <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_01_1200.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="pc" src="../../assets/images/a_main/mainbox_slide_01.png" alt="">
-                                <img class="pc_1600" src="../../assets/images/a_main/mainbox_slide_01_1600.png" alt="">
-                                <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_01_1200.png" alt="">
-                            </div>
-                            <div class="swiper-slide">
                                 <img class="pc" src="../../assets/images/a_main/mainbox_slide_02.png" alt="">
                                 <img class="pc_1600" src="../../assets/images/a_main/mainbox_slide_02_1600.png" alt="">
-                                <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_01_1200.png" alt="">
+                                <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_02_1200.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="pc" src="../../assets/images/a_main/mainbox_slide_03.png" alt="">
+                                <img class="pc_1600" src="../../assets/images/a_main/mainbox_slide_03_1600.png" alt="">
+                                <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_03_1200.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="pc" src="../../assets/images/a_main/mainbox_slide_04.png" alt="">
+                                <img class="pc_1600" src="../../assets/images/a_main/mainbox_slide_04_1600.png" alt="">
+                                <img class="pc_1200" src="../../assets/images/a_main/mainbox_slide_04_1200.png" alt="">
                             </div>
                         </div>
                         
@@ -101,14 +101,29 @@
 
     // vw
     function vw(){
-        const innerWidth = window.innerWidth;
-        if(innerWidth > 1920){
-            document.documentElement.style.setProperty('--vw', `${innerWidth}`);
-        } else if(1600 < innerWidth <= 1920){
-            document.documentElement.style.setProperty('--vw', `1920`);
-        }
+        // const innerWidth = window.innerWidth;
+        const innerHeight = window.innerHeight;
+        const vw = innerHeight*(1920/1080);
+
+        document.documentElement.style.setProperty('--vw', `${vw}px`);
+
+        // if(innerWidth > 1920){
+        //     document.documentElement.style.setProperty('--vw', `${vw}`);
+        // } else if(1600 < innerWidth <= 1920){
+        //     document.documentElement.style.setProperty('--vw', `1920`);
+        // }
     }
     vw();
+
+    window.addEventListener(`resize`, function() {
+        vw();
+    });
+
+    function vh(){
+        const innerHeight = window.innerHeight;
+        document.documentElement.style.setProperty('--vh', `${innerHeight}px`);
+    }
+    vh();
 
     window.addEventListener(`resize`, function() {
         vw();
