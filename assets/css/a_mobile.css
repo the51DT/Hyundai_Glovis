@@ -27,7 +27,7 @@ header > img {display:block; width:100%;}
 header a img {display:block; width:100%;}
 
 .list_link {position:absolute; left:0; right:0; top:calc(100vw*250/360); width:100%; height:calc(100vw*113/360);}
-.list_link.typeB {top: calc(100vw*0/360); height: calc(100vw*200/360);}
+.list_link.typeB {top: calc(100vw*0/360); height: 3%;}
 .filter_popup {position:absolute; left:0; right:0; top:calc(100vw*76/360); bottom:0; transform:translateX(100%); width:100%; max-width:72rem; margin:0 auto; padding:calc(100vw*32/360); z-index:100; background-color:#fff; overflow-y:auto; transition:all 0.2s;}
 .filter_popup.active {transform:translateX(0);}
 .filter_top_wrap {display:flex; flex-direction:column; gap:calc(100vw*20/360); width:100%; height:calc(100vw*116/360);}
